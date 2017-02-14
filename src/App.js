@@ -16,15 +16,19 @@ class App extends Component {
   }
 
   render () {
-    const { isOpen } = this.state
+    const styles = {
+      container: {
+        overflow: this.state.isOpen ? 'hidden' : 'auto'
+      }
+    }
 
     return (
-      <div className={`sidenavOpen${isOpen}`}>
+      <div style={styles.container}>
         <Sidenav
           toggleVisibility={this.toggleVisibility}
           handleOnChange={this.handleOnChange}
           sections={sections}
-          isOpen={isOpen}
+          isOpen={this.state.isOpen}
         />
         {
           sections.map(section => (
