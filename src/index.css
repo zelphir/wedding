@@ -1,9 +1,13 @@
-html,
-body,
-#root,
-[data-reactroot]{
-  height:100%;
-  width:100%;
+/* html, */
+/* body, */
+/* #root, */
+/* [data-reactroot] { */
+/*   height:100%; */
+/*   width:100%; */
+/* } */
+
+[data-reactroot].sidenavOpentrue {
+  overflow: hidden;
 }
 
 body {
