@@ -4138,14 +4138,6 @@ react-addons-pure-render-mixin@^15.4.2:
     fbjs "^0.8.4"
     object-assign "^4.1.0"
 
-react-count-down@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/react-count-down/-/react-count-down-1.0.3.tgz#7afed9759b41da0a15cd8fc704534543a421e441"
-
-"react-count-down@https://github.com/StevePavlin/react-count-down":
-  version "1.0.2"
-  resolved "https://github.com/StevePavlin/react-count-down#b7011d817a1130535060337a741281896acf058e"
-
 react-dev-utils@^0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-0.5.0.tgz#aedbf69cb1fbedb6f42350e4a988021f5cb4c493"
