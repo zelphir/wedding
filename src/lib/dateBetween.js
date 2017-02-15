@@ -1,4 +1,4 @@
-const dateBetween = (startDate, endDate, options) => {
+const dateBetween = (startDate, endDate) => {
   const second = 1000
   const minute = second * 60
   const hour = minute * 60
@@ -10,13 +10,11 @@ const dateBetween = (startDate, endDate, options) => {
   const days = Math.floor(distance / day)
   const hours = Math.floor((distance % day) / hour)
   const minutes = Math.floor((distance % hour) / minute)
-  const seconds = Math.floor((distance % minute) / second)
 
   return {
     days,
     hours,
-    minutes,
-    seconds
+    minutes
   }
 }
 

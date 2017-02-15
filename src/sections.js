@@ -1,21 +1,26 @@
 import React from 'react'
 import Hero from './components/Hero'
-import Intro from './components/Intro'
-import Countdown from './components/Countdown'
 
 const sections = [
   {
-    id: 'hero',
+    id: 'home',
     label: 'Home',
     content: <Hero />
   },
   {
-    id: 'intro',
-    content: <Intro />
+    id: 'venue',
+    label: 'Venue',
+    content: <div />
   },
   {
-    id: 'countdown',
-    content: <Countdown options={{endDate: '06/24/2017 06:00 PM', hideSeconds: true}} />
+    id: 'accommodations',
+    label: 'Accommodations',
+    content: <div />
+  },
+  {
+    id: 'visit',
+    label: 'Visit Sicily',
+    content: <div />
   }
 ]
 

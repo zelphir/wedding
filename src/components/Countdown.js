@@ -1,43 +1,60 @@
 import dateBetween from '../lib/dateBetween'
 import React, { Component } from 'react'
 
+const styles = {
+  container: {
+    backgroundColor: '#543341',
+    color: 'white'
+  },
+  countdown: {
+    fontSize: 24,
+    textAlign: 'center'
+  }
+}
+
 export default class Countdown extends Component {
-  state = { remaining: null }
+  state = {
+    remaining: null
+  }
 
   componentDidMount () {
     this.tick()
-    this.interval = setInterval(this.tick.bind(this), 1000)
+    this.interval = setInterval(this.tick, 60 * 1000)
   }
 
   componentWillUnmount () {
     clearInterval(this.interval)
   }
 
-  tick () {
+  tick = () => {
     const startDate = new Date()
     const endDate = new Date(this.props.options.endDate)
-    const remaining = dateBetween(startDate, endDate, this.props.options)
-    this.setState({ remaining: remaining })
-    console.log(remaining)
+    const remaining = dateBetween(startDate, endDate)
+    this.setState({
+      remaining: remaining
+    })
   }
 
   render () {
     const { remaining } = this.state
-    const { options } = this.props
 
-    const styles = {
-      container: {}
-    }
-
-    return remaining && (
+    return remaining ? (
       <div className='section-wrapper' style={styles.container}>
         <div className='section'>
-          { !options.hideDays && <span className='days'>{remaining.days}</span> }
-          { !options.hideHours && <span className='hours'>{remaining.hours}</span> }
-          { !options.hideMinutes && <span className='minutes'>{remaining.minutes}</span> }
-          { !options.hideSeconds && <span className='seconds'>{remaining.seconds}</span> }
+          <h2>Countdown</h2>
+          {
+            remaining && (
+              <div style={styles.countdown}>
+                <span className='days'><strong>{remaining.days}</strong> days</span>
+                <span className='hours'> <strong>{remaining.hours}</strong> hours</span>
+                <span className='minutes'> and <strong>{remaining.minutes}</strong> minutes</span>
+              </div>
+            )
+          }
         </div>
       </div>
+    ) : (
+      <div />
     )
   }
 }

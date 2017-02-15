@@ -13,5 +13,12 @@ html {
 }
 
 .section {
+  width: 100%;
   max-width: 960px;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  text-align: center;
 }

@@ -18,7 +18,7 @@ class App extends Component {
   render () {
     const styles = {
       container: {
-        overflow: this.state.isOpen ? 'hidden' : 'auto'
+        overflow: this.state.isOpen ? 'hidden' : 'inherit'
       }
     }
 
