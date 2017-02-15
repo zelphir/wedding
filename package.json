@@ -7,7 +7,9 @@
   },
   "dependencies": {
     "1-liners": "^0.4.0",
+    "normalize.css": "^5.0.0",
     "react": "^15.4.2",
+    "react-count-down": "https://github.com/StevePavlin/react-count-down",
     "react-dom": "^15.4.2",
     "react-hammerjs": "^0.5.0",
     "react-motion": "^0.4.7",

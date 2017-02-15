@@ -16,8 +16,10 @@ const styles = {
 class Hero extends Component {
   render () {
     return (
-      <div style={styles.container}>
-        <img src={heroImage} style={styles.image} role='presentation' />
+      <div className='section-wrapper' style={styles.container}>
+        <div className='section'>
+          <img src={heroImage} style={styles.image} role='presentation' />
+        </div>
       </div>
     )
   }

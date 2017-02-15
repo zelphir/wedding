@@ -14,7 +14,7 @@ const Sidenav = ({
     open={isOpen}
   >
     {
-      sections.map(section => (
+      sections.map(section => section.label && (
         <button
           onClick={toggleVisibility}
           data-section={section.id}
