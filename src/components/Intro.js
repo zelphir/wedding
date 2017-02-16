@@ -11,9 +11,10 @@ class Intro extends Component {
     return (
       <div className='section-wrapper' style={styles.container}>
         <div className='section'>
-          <h1>Hello World</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec magna et nunc commodo tempus. Aliquam egestas dui sed magna consectetur, vulputate ornare ipsum imperdiet. Nam nec fringilla risus. Curabitur enim sem, molestie quis massa varius, commodo congue arcu. Donec auctor neque nec risus scelerisque, id sagittis justo euismod. Curabitur iaculis, felis non fringilla consectetur, leo orci tincidunt enim, quis luctus metus augue at orci. Suspendisse tristique pellentesque condimentum. Aenean cursus semper ipsum, viverra luctus turpis semper id. Nunc laoreet fermentum metus, at pellentesque lacus.</p>
-          <p>Aliquam tristique nisl a sapien feugiat, quis hendrerit quam mattis. Ut sit amet est erat. Integer pulvinar id neque quis vulputate. Suspendisse cursus lectus sed eros placerat consectetur. Ut rutrum nunc in diam ullamcorper varius. Ut et neque at magna molestie bibendum quis eget felis. Cras efficitur risus eu massa tristique, quis aliquam est ullamcorper. Suspendisse pretium lorem eu sapien facilisis consectetur. Morbi tincidunt tortor diam, eu mattis sapien ornare vitae. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus ac tempus massa. Donec posuere faucibus sapien eget dapibus.</p>
+          <h1>Hello Everyone!</h1>
+          <p>We are so excited to celebrate our special day with our families and friends. Hope you all can make it!</p>
+          <p>As you know, we are both from Palermo and we have known each other for over 20 years! We basically grew up together... hence the <strong>"Finally"</strong> and the wedding in Sicily!</p>
+          <p>This website contains some information about the wedding, the venue, accomodation and much more! We will be in Palermo the week before the wedding (from the 17th June) and we are planning to organize some sightseeing and spend some time with everyone that will be around the days before and after the wedding. Just let us know when you are planning to come!</p>
         </div>
       </div>
     )

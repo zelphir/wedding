@@ -7,13 +7,18 @@
   },
   "dependencies": {
     "1-liners": "^0.4.0",
+    "google-map-react": "^0.22.3",
     "normalize.css": "^5.0.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-hammerjs": "^0.5.0",
+    "react-match-media": "^2.0.1",
+    "react-modal": "^1.6.5",
     "react-motion": "^0.4.7",
     "react-scrollable-anchor": "^0.4.1",
     "react-simple-sidenav": "^0.1.5",
+    "react-slick": "0.14.2",
+    "react-youtube": "^7.3.0",
     "rebass": "^0.3.4"
   },
   "scripts": {
@@ -21,5 +26,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "homepage": "http://zelphir.github.io/docs"
 }

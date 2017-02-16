@@ -28,7 +28,7 @@ export default class Countdown extends Component {
 
   tick = () => {
     const startDate = new Date()
-    const endDate = new Date(this.props.options.endDate)
+    const endDate = new Date('06/24/2017 06:30 PM')
     const remaining = dateBetween(startDate, endDate)
     this.setState({
       remaining: remaining
@@ -41,7 +41,6 @@ export default class Countdown extends Component {
     return remaining ? (
       <div className='section-wrapper' style={styles.container}>
         <div className='section'>
-          <h2>Countdown</h2>
           {
             remaining && (
               <div style={styles.countdown}>

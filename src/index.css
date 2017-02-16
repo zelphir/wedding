@@ -1,8 +1,9 @@
-html {
+body {
   margin: 0;
   padding: 0;
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Oxygen', sans-serif;
   font-size: 18px;
+  line-height: 1.5;
   color: #3A4245;
 }
 
@@ -21,4 +22,53 @@ html {
 h1,
 h2 {
   text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    flex-direction: column;
+  }
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+a:visited { color: #666; }
+a:visited:hover,
+a:focus,
+a:focus:hover,
+a:hover,
+a:active {
+  color: #999;
+  text-decoration: underline;
+}
+
+a.light,
+a.light:visited {
+  color: #fff;
+  text-decoration: underline;
+}
+
+a.link:visited:hover,
+a.link:focus,
+a.link:focus:hover,
+a.link:hover,
+a.link:active {
+  color: #999;
+  text-decoration: none;
+}
+
+.image-text {
+  margin-right: 15px;
+}
+
+.image-text.link {
+  cursor: pointer;
 }

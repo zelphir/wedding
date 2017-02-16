@@ -1,0 +1,32 @@
+.venue {
+  background: '#F2EEE7'
+}
+
+.maps {
+  height: 350px;
+  width: 100%;
+}
+
+.venue img {
+  width: 50%;
+  height: 100%;
+}
+
+.venue h3 {
+  margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .maps {
+    height: 200px;
+  }
+
+  .venue img {
+    width: 100%;
+    height: inherit;
+  }
+
+  .venue h3 {
+    margin-top: 10px;
+  }
+}

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Intro from './Intro'
-import Countdown from './Countdown'
 
 import heroImage from '../images/hero.png'
 
@@ -10,7 +9,8 @@ const styles = {
     textAlign: 'center'
   },
   image: {
-    width: '100%'
+    width: '100%',
+    maxWidth: 600
   }
 }
 
@@ -24,7 +24,6 @@ class Hero extends Component {
           </div>
         </div>
         <Intro />
-        <Countdown options={{endDate: '06/24/2017 06:30 PM'}} />
       </div>
     )
   }

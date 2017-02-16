@@ -1,0 +1,57 @@
+.slide {
+  position: relative;
+}
+
+.slide .label {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 5px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.slide img {
+  width: 100%;
+}
+
+.visit {
+  background: #222426;
+  color: #999;
+}
+
+.visit h2 {
+  margin: 15px 0;
+}
+
+.visit h3,
+.visit h5 {
+  color:#ccc;
+  margin: 0;
+}
+
+.visit cite {
+  color: #777;
+  display: block;
+  text-align: right;
+}
+.visit cite span,
+.visit cite small {
+  display: block;
+}
+
+.close-modal {
+  text-align: right;
+  cursor: pointer;
+  color: #999;
+  padding: 0 20px;
+  font-size: 40px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  right: 0;
+}
+
+.visit .video-mobile {
+  margin: 15px 0;
+}

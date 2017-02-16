@@ -1,5 +1,7 @@
 import React from 'react'
 import Hero from './components/Hero'
+import Visit from './components/Visit'
+import Venue from './components/Venue'
 
 const sections = [
   {
@@ -10,7 +12,7 @@ const sections = [
   {
     id: 'venue',
     label: 'Venue',
-    content: <div />
+    content: <Venue />
   },
   {
     id: 'accommodations',
@@ -20,7 +22,7 @@ const sections = [
   {
     id: 'visit',
     label: 'Visit Sicily',
-    content: <div />
+    content: <Visit />
   }
 ]
 
