@@ -36,12 +36,12 @@ class Venue extends Component {
                 <h3>Il Moro Club</h3>
                 <h4>Piazza Monsignor Pottino, 3<br />Palermo</h4>
                 <p>
-                  The ceremony and the party will be held in the same place and on the beach so feel free to dress casually. We suggest to wear something fresh, like linen and possibly light colours!<br />
-                  Following the wedding ceremony, there will be a cocktail hour and an <em>*Apericena</em>.
+                  The ceremony and the party will be held in the same place and on the beach so feel free to dress casually. We suggest to wear something fresh, like linen and possibly light colours!<br />We are trying to give a white/sandy/peach theme to the party, but it's just an idea, so don't get too stressed about it.
                 </p>
               </div>
             </div>
             <p>
+              Following the wedding ceremony, there will be a cocktail hour and an <em>*Apericena</em>.<br />
               <small><em>* Apertivo+Dinner | Vegetarian or gluten-free options will be provided if needed</em>.</small>
             </p>
           </div>

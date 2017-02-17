@@ -14,7 +14,8 @@ class Contact extends Component {
       <div className='section-wrapper' style={styles.container}>
         <div className='section'>
           <h2>Contact us</h2>
-          <p>Any question, doubt, whatever... Just let us know! You got our numbers.</p>
+          <p>If you have any question, doubt or if there's anything you need please do not hesitate to ask!<br />We are glad to help you out.</p>
+          <h4>You got our numbers.</h4>
         </div>
       </div>
     )

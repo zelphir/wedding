@@ -15,7 +15,8 @@ class Present extends Component {
             Wedding List
             <small style={{color: '#43576E'}}>Argentina or Namibia?</small>
           </h2>
-          <p>Here we are... We could just say: <em>"Nothing, we just want to have you there!"</em>. But we know that is not going to happen, so, since we live in a small flat, the only thing we can thing about is if you would like to contribute to our next trip. We have two countries we'd like to visit: <strong>Argentina</strong> or <strong>Namibia</strong>! If you want to help us, you can send a contribution to either our Euro (Italian) or English accounts below:</p>
+          <p>Here we are... We could just say: <em>"Nothing, we just want to have you there!"</em> And it's true! But we all know that is not gonna happen, so, since we live in a small flat, the only thing we can think about is if you would like to contribute to our next trip. We love to travel!</p>
+          <p>There are two countries that we'd like to visit: <strong>Argentina</strong> and <strong>Namibia</strong>! We are still thinking which one first.<br />If you want to help us, you can send a contribution to either our Euro (Italian) or English accounts below:</p>
           <div className='content'>
             <div className='bank'>
               <h5>Italian (EUR)</h5>
