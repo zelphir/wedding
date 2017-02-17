@@ -30,6 +30,10 @@
   margin: 0;
 }
 
+.visit h5:last-of-type {
+  margin-top: 20px;
+}
+
 .visit cite {
   color: #777;
   display: block;

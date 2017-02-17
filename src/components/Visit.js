@@ -125,7 +125,10 @@ class Visit extends Component {
       <div>
         <div className='section-wrapper visit'>
           <div className='section'>
-            <h2>What to do in Sicily</h2>
+            <h2>
+              What to do/see
+              <small style={{color: '#777'}}>... in Palermo and in Sicily</small>
+            </h2>
           </div>
         </div>
         <Slider {...sliderSettings}>
@@ -177,7 +180,7 @@ class Visit extends Component {
               </div>
             </div>
             <div>
-              <h4>More videos</h4>
+              <h4>More info</h4>
               <h5>
                 <a
                   className='light'
@@ -186,6 +189,14 @@ class Visit extends Component {
                 >BBC: Sicily: The Wonder of the Mediterranean</a>
               </h5>
               <small>Historian Michael Scott journeys through Sicily to find out how 3,000 years of conquest and settlement have shaped the identity of the island we see today.</small>
+              <h5>
+                <a
+                  className='light'
+                  href='https://www.google.co.uk/destination?q=palermo&biw=1680&bih=927&site=search&output=search&dest_mid=/m/09pxc&sa=X&ved=0ahUKEwj1uIejrZfSAhXlK8AKHX43AmIQri4IywEwIw'
+                  target='_blank'
+                >Google travel guide</a>
+              </h5>
+              <small>Google travel guide with useful info and top sights</small>
             </div>
           </div>
         </div>

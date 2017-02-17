@@ -14,8 +14,11 @@ const Marker = ({ text }) => (
 
 class Venue extends Component {
   static defaultProps = {
-    center: {lat: 38.153816, lng: 13.365685},
-    zoom: 12
+    center: {
+      lat: 38.1569344,
+      lng: 13.3732059
+    },
+    zoom: 11
   }
 
   render () {
@@ -23,22 +26,24 @@ class Venue extends Component {
       <div>
         <div className='section-wrapper venue'>
           <div className='section'>
-            <h2>Ceremony and Venue</h2>
+            <h2>
+              Ceremony and Venue
+              <small style={{color: '#43576E'}}>24th June 2017 - 6:00 pm</small>
+            </h2>
             <div className='content'>
               <img src={venueImage} role='presentation' className='image-text' />
               <div>
                 <h3>Il Moro Club</h3>
                 <h4>Piazza Monsignor Pottino, 3<br />Palermo</h4>
-                <h3>24th June 2017 - 6:00 pm</h3>
+                <p>
+                  The ceremony and the party will be held in the same place and on the beach so feel free to dress casually. We suggest to wear something fresh, like linen and possibly light colours!<br />
+                  Following the wedding ceremony, there will be a cocktail hour and an <em>*Apericena</em>.
+                </p>
               </div>
             </div>
-            <div>
-              <p>
-                The ceremony and the party will be held in the same place and on the beach so feel free to dress casually<br />
-                Following the wedding ceremony, there will be a cocktail hour and a standing <em>*Apericena</em>.<br />
-                <small><em>* Apertivo+Dinner | Vegetarian or gluten-free options will be provided if needed</em>.</small>
-              </p>
-            </div>
+            <p>
+              <small><em>* Apertivo+Dinner | Vegetarian or gluten-free options will be provided if needed</em>.</small>
+            </p>
           </div>
         </div>
         <div className='section-wrapper maps'>
@@ -46,7 +51,6 @@ class Venue extends Component {
             defaultCenter={this.props.center}
             defaultZoom={this.props.zoom}
             options={{
-              gestureHandling: 'none',
               scrollwheel: false
             }}
             bootstrapURLKeys={{
@@ -54,8 +58,8 @@ class Venue extends Component {
             }}
           >
             <Marker
-              lat={38.1569344}
-              lng={13.3732059}
+              lat={this.props.center.lat}
+              lng={this.props.center.lng}
             />
           </GoogleMapReact>
         </div>
