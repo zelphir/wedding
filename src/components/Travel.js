@@ -12,7 +12,13 @@ class Travel extends Component {
       <div className='section-wrapper' style={styles.container}>
         <div className='section'>
           <h2>Getting there</h2>
-          <p>Ryanair (from Stansted) has a daily flight, EasyJet (from Gatwick) flyes to Palermo 3-4 times a week, BA (from Heathrow) 3 times a week (could get very expensive) and Alitalia everyday (more than one) from Heathrow as well but with a stop in Rome or Milan (usually the stop is 1-1.5 hours).</p>
+          <p>There are several flights from London to Palermo, everyday and also more than one per day (if you don't mind stopping in Rome or Milan)</p>
+          <ul>
+            <li><a href='https://www.ryanair.com' target='_blank'>Ryanair</a>, from Stansted: daily flight</li>
+            <li><a href='https://www.easyjet.com/en' target='_blank'>EasyJet</a>, from Gatwick: 5 times a week (Tue, Wed, Thu, Sat and Sun)</li>
+            <li><a href='https://www.britishairways.com' target='_blank'>BA</a>, from Heathrow: 3 times a week (Tue, Thu and Sun)</li>
+            <li><a href='https://www.alitalia.com/en_gb' target='_blank'>Alitalia</a>, from Heathrow: everyday (more than one a day) with a stop in Rome or Milan, usually the stop is 1-1.5 hours or more</li>
+          </ul>
           <p>Any question feel free to ask, we will try to help you as best as we can.</p>
         </div>
       </div>
