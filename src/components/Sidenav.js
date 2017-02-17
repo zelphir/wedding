@@ -1,5 +1,8 @@
 import React from 'react'
 import Drawer from '../lib/Drawer'
+import ReactSVG from 'react-svg'
+
+import './Sidenav.css'
 
 const Sidenav = ({
   handleOnChange,
@@ -8,20 +11,25 @@ const Sidenav = ({
   toggleVisibility
 }) => (
   <Drawer
-    width={260}
-    drawerStyle={{backgroundColor: 'red'}}
+    width={230}
+    drawerStyle={{backgroundColor: '#3A4245'}}
     onChange={handleOnChange}
     open={isOpen}
   >
     {
       sections.map(section => section.label && (
-        <button
+        <span
           onClick={toggleVisibility}
           data-section={section.id}
           key={section.id}
+          className='menu-item'
         >
+          <ReactSVG
+            path={require(`../images/${section.id}.svg`)}
+            className='menu-icon'
+          />
           {section.label}
-        </button>
+        </span>
       ))
     }
   </Drawer>

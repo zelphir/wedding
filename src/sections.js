@@ -11,12 +11,12 @@ const sections = [
   },
   {
     id: 'venue',
-    label: 'Venue',
+    label: 'Ceremony',
     content: <Venue />
   },
   {
-    id: 'accommodations',
-    label: 'Accommodations',
+    id: 'accommodation',
+    label: 'Accommodation',
     content: <div />
   },
   {

@@ -87,6 +87,7 @@ class Visit extends Component {
       slidesToShow: 3,
       slidesToScroll: 1,
       arrows: false,
+      lazyLoad: 'ondemand',
       responsive: [
         {
           breakpoint: 600,
@@ -154,7 +155,7 @@ class Visit extends Component {
                 </a>
               </small>
             </cite>
-            <div className='content'>
+            <div className='content' style={{marginTop: 15}}>
               <Mobile />
               <Desktop />
               <div>

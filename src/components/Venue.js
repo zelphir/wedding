@@ -29,14 +29,14 @@ class Venue extends Component {
               <div>
                 <h3>Il Moro Club</h3>
                 <h4>Piazza Monsignor Pottino, 3<br />Palermo</h4>
-                <p>24th June 2017 - 6:00 pm</p>
+                <h3>24th June 2017 - 6:00 pm</h3>
               </div>
             </div>
             <div>
               <p>
-                The ceremony and the party will be held in the same place and on the beach so feel free to wear...<br />
-                Following the wedding ceremony, there will be a cocktail hour and a standing "Apericena".<br />
-                <small>* Vegetarian or gluten-free option will be provided if needed.</small>
+                The ceremony and the party will be held in the same place and on the beach so feel free to dress casually<br />
+                Following the wedding ceremony, there will be a cocktail hour and a standing <em>*Apericena</em>.<br />
+                <small><em>* Apertivo+Dinner | Vegetarian or gluten-free options will be provided if needed</em>.</small>
               </p>
             </div>
           </div>

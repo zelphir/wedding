@@ -29,38 +29,25 @@ h2 {
   flex-direction: row;
 }
 
-@media screen and (max-width: 600px) {
-  .content {
-    flex-direction: column;
-  }
-}
-
 a {
   color: #666;
   text-decoration: none;
+  transition: all 0.2s linear;
 }
 
-a:visited { color: #666; }
-a:visited:hover,
 a:focus,
-a:focus:hover,
-a:hover,
-a:active {
+a:hover {
   color: #999;
   text-decoration: underline;
 }
 
-a.light,
-a.light:visited {
+a.light {
   color: #fff;
   text-decoration: underline;
 }
 
-a.link:visited:hover,
-a.link:focus,
-a.link:focus:hover,
-a.link:hover,
-a.link:active {
+a.light:focus,
+a.light:hover {
   color: #999;
   text-decoration: none;
 }
@@ -71,4 +58,35 @@ a.link:active {
 
 .image-text.link {
   cursor: pointer;
+  transition: opacity 0.2s linear;
+}
+
+.image-text.link:hover {
+  opacity: 0.8;
+}
+
+.menu {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  cursor: pointer;
+}
+
+.menu img,
+.top img {
+  width: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .menu {
+    position: static;
+    display: block;
+    background: #F2EEE7;
+    padding: 10px 10px 0;
+    margin-bottom: -30px;
+  }
 }

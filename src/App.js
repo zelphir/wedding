@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
 import ScrollableAnchor, { goToAnchor } from 'react-scrollable-anchor'
+import ScrollToTop from 'react-scroll-up'
+
 import Sidenav from './components/Sidenav'
 import sections from './sections'
+import menu from './images/menu-alt.svg'
+import top from './images/top.svg'
 
 class App extends Component {
   state = { isOpen: false }
@@ -30,16 +34,23 @@ class App extends Component {
           sections={sections}
           isOpen={this.state.isOpen}
         />
+        <span className='menu' onClick={this.toggleVisibility}>
+          <img src={menu} role='presentation' />
+        </span>
         {
           sections.map(section => (
             <ScrollableAnchor
               key={section.id}
               id={section.id}
+              toggleVisibility={this.toggleVisibility}
             >
               {section.content}
             </ScrollableAnchor>
           ))
         }
+        <ScrollToTop showUnder={160}>
+          <img src={top} role='presentation' />
+        </ScrollToTop>
       </div>
     )
   }

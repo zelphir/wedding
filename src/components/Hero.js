@@ -10,7 +10,7 @@ const styles = {
   },
   image: {
     width: '100%',
-    maxWidth: 600
+    maxWidth: 700
   }
 }
 

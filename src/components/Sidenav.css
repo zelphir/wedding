@@ -1,0 +1,24 @@
+.menu-item {
+  padding: 10px;
+  color: #F2EEE7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity 0.2s linear;
+}
+
+.menu-item:hover {
+  opacity: 0.75;
+}
+
+.menu-item div div {
+  display: flex;
+}
+
+.menu-item .menu-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  fill: #F2EEE7
+}
