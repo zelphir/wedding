@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ScrollToTop from 'react-scroll-up'
 import { connect } from 'react-redux'
 import { withTranslate, IntlActions } from 'react-redux-multilingual'
+import ReactGA from 'react-ga'
 
 import SwitchLanguage from './components/SwitchLanguage'
 import Sidenav from './components/Sidenav'
@@ -14,12 +15,25 @@ import top from './images/top.svg'
 class App extends Component {
   state = { isOpen: false }
 
-  toggleVisibility = ({ target: { dataset: { section } } }) => {
+  toggleVisibility = ({ target: { href } }) => {
+    ReactGA.event({
+      category: 'Link',
+      action: 'Click',
+      label: this.state.isOpen
+        ? href.split('#')[1]
+        : 'Open Sidenav'
+    })
     this.setState({ isOpen: !this.state.isOpen })
   }
 
   handleSwitchLanguage = ({ target: { dataset: { lang } } }) => {
     this.props.dispatch(IntlActions.setLocale(lang))
+    ReactGA.event({
+      category: 'Link',
+      action: 'Click',
+      label: 'Switch Language',
+      value: lang
+    })
   }
 
   handleOnChange = (isOpen) => {

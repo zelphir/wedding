@@ -8,7 +8,7 @@ const en = {
       p1: 'We are so excited to celebrate our special day with our families and friends. Hope you all can make it!',
       p2_1: 'As you know, we are both from Palermo and we have known each other for over 20 years! We basically grew up together... hence the ',
       p2_2: ' and the wedding in Sicily!',
-      p3: 'This website contains some information about the wedding, the venue, accomodation and much more! We will be in Palermo the week before the wedding (from the 17th June) and we are planning to organize some sightseeing and spend some time with everyone that will be around the days before and after the wedding. Just let us know when you are planning to come!'
+      p3: 'This website contains some information about the wedding, the venue, accomodation and much more! We will be in Palermo the week before the wedding (from the 17th June) and we are planning to organize some sightseeing and spend some time with everyone who will be around the days before and after the wedding. Just let us know when you are planning to come!'
     },
     contact: {
       label: 'Contact Us',
@@ -18,8 +18,8 @@ const en = {
       h4: 'You got our numbers'
     },
     present: {
-      label: 'Wedding List',
-      h2: 'Wedding List',
+      label: 'Wedding Gift',
+      h2: 'Wedding Gift',
       small: 'Argentina or Namibia?',
       p1_1: 'Here we are... We could just say: ',
       em: '"Nothing, we just want to have you there!"',

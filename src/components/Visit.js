@@ -3,6 +3,7 @@ import YouTube from 'react-youtube'
 import Modal from 'react-modal'
 import { MatchMediaHOC } from 'react-match-media'
 import Slider from 'react-slick'
+import ReactGA from 'react-ga'
 
 import './Visit.css'
 import videoButton from '../images/videoButton.png'
@@ -52,7 +53,20 @@ class Visit extends Component {
   }
 
   openModal = () => {
+    ReactGA.event({
+      category: 'Link',
+      action: 'Click',
+      label: 'Open video desktop'
+    })
     this.setState({modalIsOpen: true})
+  }
+
+  onPlay = () => {
+    ReactGA.event({
+      category: 'Link',
+      action: 'Click',
+      label: 'Open video mobile'
+    })
   }
 
   closeModal = () => {
@@ -120,6 +134,7 @@ class Visit extends Component {
       <YouTube
         videoId='1ecpwfqBZMM'
         opts={{...videoSettings, playerVars: {autoplay: 0}}}
+        onPlay={this.onPlay}
       />
     </div>, '(max-width: 600px)')
 
