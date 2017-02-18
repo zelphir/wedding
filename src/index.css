@@ -7,6 +7,11 @@ body {
   color: #3A4245;
 }
 
+body.withSidenav {
+  overflow: hidden;
+  -webkit-overflow-scrolling: hidden;
+}
+
 .section-wrapper {
   box-sizing: border-box;
   display: flex;

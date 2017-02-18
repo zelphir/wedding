@@ -9,30 +9,38 @@ const Sidenav = ({
   isOpen,
   sections,
   toggleVisibility
-}) => (
+}, context) => (
   <Drawer
     width={230}
-    drawerStyle={{backgroundColor: '#3A4245'}}
+    drawerStyle={{backgroundColor: '#3A4245', overflowY: 'scroll'}}
     onChange={handleOnChange}
     open={isOpen}
   >
     {
-      sections.map(section => section.label && (
-        <span
-          onClick={toggleVisibility}
-          data-section={section.id}
+      sections.map(section => (
+        <a
+          href={`#${section.id}`}
           key={section.id}
           className='menu-item'
+          onClick={toggleVisibility}
         >
           <ReactSVG
             path={require(`../images/${section.id}.svg`)}
             className='menu-icon'
           />
-          {section.label}
-        </span>
+          {
+            section.label
+            ? section.label
+            : context.translate(`${section.id}.label`)
+          }
+        </a>
       ))
     }
   </Drawer>
 )
+
+Sidenav.contextTypes = {
+  translate: React.PropTypes.func
+}
 
 export default Sidenav

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Intro from './Intro'
 
 import heroImage from '../images/hero.png'
@@ -14,19 +14,15 @@ const styles = {
   }
 }
 
-class Hero extends Component {
-  render () {
-    return (
-      <div>
-        <div className='section-wrapper' style={styles.container}>
-          <div className='section'>
-            <img src={heroImage} style={styles.image} role='presentation' />
-          </div>
-        </div>
-        <Intro />
+const Hero = () => (
+  <div>
+    <div className='section-wrapper' style={styles.container}>
+      <div className='section'>
+        <img src={heroImage} style={styles.image} role='presentation' />
       </div>
-    )
-  }
-}
+    </div>
+    <Intro />
+  </div>
+)
 
 export default Hero

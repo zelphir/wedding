@@ -47,7 +47,9 @@ const images = [
 ]
 
 class Visit extends Component {
-  state = {modalIsOpen: false}
+  state = {
+    modalIsOpen: false
+  }
 
   openModal = () => {
     this.setState({modalIsOpen: true})

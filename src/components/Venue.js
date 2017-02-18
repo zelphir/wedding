@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import GoogleMapReact from 'google-map-react'
 
 import Countdown from './Countdown'
@@ -12,61 +12,66 @@ const Marker = ({ text }) => (
   </div>
 )
 
-class Venue extends Component {
-  static defaultProps = {
-    center: {
-      lat: 38.1569344,
-      lng: 13.3732059
-    },
-    zoom: 11
-  }
+const options = {
+  center: {
+    lat: 38.1569344,
+    lng: 13.3732059
+  },
+  zoom: 11
+}
 
-  render () {
-    return (
-      <div>
-        <div className='section-wrapper venue'>
-          <div className='section'>
-            <h2>
-              Ceremony and Venue
-              <small style={{color: '#43576E'}}>24th June 2017 - 6:00 pm</small>
-            </h2>
-            <div className='content'>
-              <img src={venueImage} role='presentation' className='image-text' />
-              <div>
-                <h3>Il Moro Club</h3>
-                <h4>Piazza Monsignor Pottino, 3<br />Palermo</h4>
-                <p>
-                  The ceremony and the party will be held in the same place and on the beach so feel free to dress casually. We suggest to wear something fresh, like linen and possibly light colours!<br />We are trying to give a white/sandy/peach theme to the party, but it's just an idea, so don't get too stressed about it.
-                </p>
-              </div>
-            </div>
+const Venue = (props, context) => (
+  <div>
+    <div className='section-wrapper venue'>
+      <div className='section'>
+        <h2>
+          {context.translate('venue.h2')}
+          <small style={{color: '#43576E'}}>
+            {context.translate('venue.small')}
+          </small>
+        </h2>
+        <div className='content'>
+          <img src={venueImage} role='presentation' className='image-text' />
+          <div>
+            <h3>Il Moro Club</h3>
+            <h4>Piazza Monsignor Pottino, 3<br />Palermo</h4>
             <p>
-              Following the wedding ceremony, there will be a cocktail hour and an <em>*Apericena</em>.<br />
-              <small><em>* Apertivo+Dinner | Vegetarian or gluten-free options will be provided if needed</em>.</small>
+              {context.translate('venue.p1')}
+              <br />
+              {context.translate('venue.p2')}
             </p>
           </div>
         </div>
-        <div className='section-wrapper maps'>
-          <GoogleMapReact
-            defaultCenter={this.props.center}
-            defaultZoom={this.props.zoom}
-            options={{
-              scrollwheel: false
-            }}
-            bootstrapURLKeys={{
-              key: 'AIzaSyB_kh1u7KbxgxgT1zMP7hFK-Zrq62ke6xs'
-            }}
-          >
-            <Marker
-              lat={this.props.center.lat}
-              lng={this.props.center.lng}
-            />
-          </GoogleMapReact>
-        </div>
-        <Countdown />
+        <p>
+          {context.translate('venue.p3')}
+          <em>*Apericena</em>.<br />
+          <small><em>* {context.translate('venue.desc')}</em>.</small>
+        </p>
       </div>
-    )
-  }
+    </div>
+    <div className='section-wrapper maps'>
+      <GoogleMapReact
+        defaultCenter={options.center}
+        defaultZoom={options.zoom}
+        options={{
+          scrollwheel: false
+        }}
+        bootstrapURLKeys={{
+          key: 'AIzaSyB_kh1u7KbxgxgT1zMP7hFK-Zrq62ke6xs'
+        }}
+      >
+        <Marker
+          lat={options.center.lat}
+          lng={options.center.lng}
+        />
+      </GoogleMapReact>
+    </div>
+    <Countdown />
+  </div>
+)
+
+Venue.contextTypes = {
+  translate: React.PropTypes.func
 }
 
 export default Venue

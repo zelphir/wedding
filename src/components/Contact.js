@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 const styles = {
   container: {
@@ -8,18 +8,21 @@ const styles = {
   }
 }
 
-class Contact extends Component {
-  render () {
-    return (
-      <div className='section-wrapper' style={styles.container}>
-        <div className='section'>
-          <h2>Contact us</h2>
-          <p>If you have any question, doubt or if there's anything you need please do not hesitate to ask!<br />We are glad to help you out.</p>
-          <h4>You got our numbers.</h4>
-        </div>
-      </div>
-    )
-  }
+const Contact = (props, context) => (
+  <div className='section-wrapper' style={styles.container}>
+    <div className='section'>
+      <h2>{context.translate('contact.h2')}</h2>
+      <p>
+        {context.translate('contact.p1')}<br />
+        {context.translate('contact.p2')}
+      </p>
+      <h4>{context.translate('contact.h4')}</h4>
+    </div>
+  </div>
+)
+
+Contact.contextTypes = {
+  translate: React.PropTypes.func
 }
 
 export default Contact
