@@ -13,6 +13,7 @@ const Intro = (props, context) => (
       <p>{context.translate('intro.p1')}</p>
       <p>{context.translate('intro.p2_1')}<strong>"Finally"</strong>{context.translate('intro.p2_2')}</p>
       <p>{context.translate('intro.p3')}</p>
+      <cite>Isa & Roby</cite>
     </div>
   </div>
 )

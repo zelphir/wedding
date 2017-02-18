@@ -20,6 +20,13 @@ const options = {
   zoom: 11
 }
 
+const colors = [
+  '#DFC38D',
+  '#F2EEE7',
+  '#F1C19E',
+  '#F1B29E'
+]
+
 const Venue = (props, context) => (
   <div>
     <div className='section-wrapper venue'>
@@ -37,14 +44,30 @@ const Venue = (props, context) => (
             <h4>Piazza Monsignor Pottino, 3<br />Palermo</h4>
             <p>
               {context.translate('venue.p1')}
-              <br />
+              <span style={{textAlign: 'center', display: 'block'}}>
+                {
+                  colors.map((color, key) => (
+                    <span
+                      key={key}
+                      style={{
+                        borderRadius: '50%',
+                        width: 15,
+                        height: 15,
+                        marginRight: 10,
+                        background: color,
+                        display: 'inline-block'
+                      }}
+                    />
+                  ))
+                }
+              </span>
               {context.translate('venue.p2')}
             </p>
           </div>
         </div>
         <p>
-          {context.translate('venue.p3')}
-          <em>*Apericena</em>.<br />
+          {context.translate('venue.p3_1')}
+          <em>*Apericena</em>. {context.translate('venue.p3_2')}<br />
           <small><em>* {context.translate('venue.desc')}</em>.</small>
         </p>
       </div>

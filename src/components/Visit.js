@@ -4,6 +4,7 @@ import Modal from 'react-modal'
 import { MatchMediaHOC } from 'react-match-media'
 import Slider from 'react-slick'
 import ReactGA from 'react-ga'
+import shuffle from 'shuffle-array'
 
 import './Visit.css'
 import videoButton from '../images/videoButton.png'
@@ -22,10 +23,6 @@ const images = [
     label: 'La Martorana'
   },
   {
-    src: require('../images/night-life-1.jpg'),
-    label: 'Night Life'
-  },
-  {
     src: require('../images/massimo.jpg'),
     label: 'Massimo Theatre'
   },
@@ -34,12 +31,28 @@ const images = [
     label: 'Mondello Beach'
   },
   {
-    src: require('../images/norman-palace.jpg'),
-    label: 'Norman Palace'
-  },
-  {
     src: require('../images/breakfast.jpg'),
     label: 'Light Breakfast'
+  },
+  {
+    src: require('../images/night-life-1.jpg'),
+    label: 'Night Life'
+  },
+  {
+    src: require('../images/arancine.jpg'),
+    label: 'Arancine'
+  },
+  {
+    src: require('../images/cannoli.jpg'),
+    label: 'Cannoli'
+  },
+  {
+    src: require('../images/panelle.jpg'),
+    label: 'Panelle'
+  },
+  {
+    src: require('../images/cassatine.jpg'),
+    label: 'Cassatine'
   },
   {
     src: require('../images/palatina.jpg'),
@@ -150,7 +163,7 @@ class Visit extends Component {
         </div>
         <Slider {...sliderSettings}>
           {
-            images.map((img, key) => (
+            shuffle(images).map((img, key) => (
               <div className='slide' key={key}>
                 <img src={img.src} role='presentation' />
                 <div className='label'>{img.label}</div>

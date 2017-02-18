@@ -1,5 +1,7 @@
 import React from 'react'
 
+import guides from '../images/guides.png'
+
 const styles = {
   container: {
     backgroundColor: '#F2EEE7'
@@ -13,19 +15,26 @@ const Present = (props, context) => (
         {context.translate('present.h2')}
         <small style={{color: '#43576E'}}>{context.translate('present.small')}</small>
       </h2>
-      <p>{context.translate('present.p1_1')}
-        <em>{context.translate('present.em')}</em>
-        {context.translate('present.p1_2')}
-      </p>
-      <p>
-        {context.translate('present.p2_1')}
-        <strong>Argentina</strong> {context.translate('and')} <strong>Namibia</strong>
-        {context.translate('present.p2_2')}
-        <br />
-        {context.translate('present.p2_3')}
-      </p>
       <div className='content'>
-        <div className='bank'>
+        <div className='split-img'>
+          <img src={guides} role='presentation' />
+        </div>
+        <div className='split-text'>
+          <p>{context.translate('present.p1_1')}
+            <em>{context.translate('present.em')}</em>
+            {context.translate('present.p1_2')}
+          </p>
+          <p>
+            {context.translate('present.p2_1')}
+            <strong>Argentina</strong> {context.translate('and')} <strong>Namibia</strong>
+            {context.translate('present.p2_2')}
+            <br />
+            {context.translate('present.p2_3')}
+          </p>
+        </div>
+      </div>
+      <div className='content'>
+        <div className='split'>
           <h5>{context.translate('present.c1')}</h5>
           <span>
             {context.translate('name')}: <strong>ROBERTO MANZELLA</strong><br />
@@ -36,7 +45,7 @@ const Present = (props, context) => (
             Ref: <strong>WEDDING</strong>
           </span>
         </div>
-        <div className='bank'>
+        <div className='split'>
           <h5>{context.translate('present.c2')}</h5>
           <span>
             {context.translate('name')}: <strong>ROBERTO MANZELLA</strong><br />

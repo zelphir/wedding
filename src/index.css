@@ -87,8 +87,26 @@ a.light:hover {
   width: 20px;
 }
 
-.bank {
+.split {
   width: 50%;
+}
+
+.split-img {
+  flex: 1;
+  text-align: center;
+}
+
+.split-img img {
+  width: 80%;
+}
+
+.split-text {
+  flex: 2;
+}
+
+cite {
+  display: block;
+  text-align: right;
 }
 
 @media screen and (max-width: 600px) {
@@ -104,7 +122,15 @@ a.light:hover {
     margin-bottom: -30px;
   }
 
-  .bank {
+  .split {
     width: 100%;
+  }
+
+  .split-img img {
+    width: 50%;
+  }
+
+  .split-text {
+    flex: 1;
   }
 }
