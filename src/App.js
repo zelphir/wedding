@@ -19,9 +19,7 @@ class App extends Component {
     ReactGA.event({
       category: 'Link',
       action: 'Click',
-      label: this.state.isOpen
-        ? href.split('#')[1]
-        : 'Open Sidenav'
+      label: this.state.isOpen ? href.split('#')[1] : 'Open Sidenav'
     })
     this.setState({ isOpen: !this.state.isOpen })
   }
@@ -36,16 +34,17 @@ class App extends Component {
     })
   }
 
-  handleOnChange = (isOpen) => {
+  handleOnChange = isOpen => {
     !isOpen && this.setState({ isOpen: false })
   }
 
   getSections = () => {
     if (this.props.locale === 'it') {
-      return sections.filter(section =>
-        section.id !== 'travel' &&
-        section.id !== 'accommodation' &&
-        section.id !== 'visit'
+      return sections.filter(
+        section =>
+          section.id !== 'travel' &&
+          section.id !== 'accommodation' &&
+          section.id !== 'visit'
       )
     }
     return sections
@@ -53,8 +52,8 @@ class App extends Component {
 
   render () {
     this.state.isOpen
-     ? document.body.classList.add('withSidenav')
-     : document.body.classList.remove('withSidenav')
+      ? document.body.classList.add('withSidenav')
+      : document.body.classList.remove('withSidenav')
 
     return (
       <div>
@@ -74,13 +73,11 @@ class App extends Component {
           active={this.props.locale}
         />
 
-        {
-          this.getSections().map(Section => (
-            <div key={Section.id} id={Section.id}>
-              <Section.content />
-            </div>
-          ))
-        }
+        {this.getSections().map(Section => (
+          <div key={Section.id} id={Section.id}>
+            <Section.content />
+          </div>
+        ))}
 
         <ScrollToTop showUnder={160}>
           <img src={top} role='presentation' />

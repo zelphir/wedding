@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
+import ReactGA from 'react-ga'
 
+import BankDetails from './BankDetails'
 import guides from '../images/guides.png'
 
 const styles = {
@@ -8,61 +10,61 @@ const styles = {
   }
 }
 
-const Present = (props, context) => (
-  <div className='section-wrapper' style={styles.container}>
-    <div className='section'>
-      <h2>
-        {context.translate('present.h2')}
-        <small style={{color: '#43576E'}}>{context.translate('present.small')}</small>
-      </h2>
-      <div className='content'>
-        <div className='split-img'>
-          <img src={guides} role='presentation' />
-        </div>
-        <div className='split-text'>
-          <p>{context.translate('present.p1_1')}
-            <em>{context.translate('present.em')}</em>
-            {context.translate('present.p1_2')}
-          </p>
-          <p>
-            {context.translate('present.p2_1')}
-            <strong>Argentina</strong> {context.translate('and')} <strong>Namibia</strong>
-            {context.translate('present.p2_2')}
-            <br />
-            {context.translate('present.p2_3')}
-          </p>
-        </div>
-      </div>
-      <div className='content'>
-        <div className='split'>
-          <h5>{context.translate('present.c1')}</h5>
-          <span>
-            {context.translate('name')}: <strong>ROBERTO MANZELLA</strong><br />
-            Iban: <strong>IT49J0316901600CC0010280674</strong><br />
-            ABI: <strong>03169</strong><br />
-            CAB: <strong>01600</strong><br />
-            BIC: <strong>INGDITM1</strong><br />
-            Ref: <strong>WEDDING</strong>
-          </span>
-        </div>
-        <div className='split'>
-          <h5>{context.translate('present.c2')}</h5>
-          <span>
-            {context.translate('name')}: <strong>ROBERTO MANZELLA</strong><br />
-            Account number: <strong>89041210</strong><br />
-            Sort code: <strong>09-01-28</strong><br />
-            BIC: <strong>ABBYGB2LXXX</strong><br />
-            Iban: <strong>GB16ABBY09012889041210</strong><br />
-            Ref: <strong>WEDDING</strong>
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-)
+class Present extends Component {
+  state = {
+    modalIsOpen: false
+  }
 
-Present.contextTypes = {
-  translate: React.PropTypes.func
+  static contextTypes = {
+    translate: React.PropTypes.func
+  }
+
+  openModal = () => {
+    ReactGA.event({
+      category: 'Link',
+      action: 'Click',
+      label: 'Open Bank modal'
+    })
+    this.setState({modalIsOpen: true})
+  }
+
+  closeModal = () => {
+    this.setState({modalIsOpen: false})
+  }
+
+  render () {
+    return (
+      <div className='section-wrapper' style={styles.container}>
+        <div className='section'>
+          <h2>
+            {this.context.translate('present.h2')}
+            <small style={{color: '#43576E'}}>{this.context.translate('present.small')}</small>
+          </h2>
+          <div className='content'>
+            <div className='split-img'>
+              <img src={guides} role='presentation' />
+            </div>
+            <div className='split-text'>
+              <p>{this.context.translate('present.p1_1')}
+                <em>{this.context.translate('present.em')}</em>
+                {this.context.translate('present.p1_2')}
+              </p>
+              <p>
+                {this.context.translate('present.p2_1')}
+                <strong>Argentina</strong> {this.context.translate('and')} <strong>Namibia</strong>
+                {this.context.translate('present.p2_2')}
+              </p>
+            </div>
+          </div>
+          <BankDetails
+            openModal={this.openModal}
+            closeModal={this.closeModal}
+            modalIsOpen={this.state.modalIsOpen}
+          />
+        </div>
+      </div>
+    )
+  }
 }
 
 export default Present

@@ -26,10 +26,11 @@ const it = {
       p1_2: ', il che è vero! Ma dato che in molti ci avete giá chiesto, eccoci qua... Come sapete viviamo insieme già da diversi anni nel nostro piccolo appartamento a Londra che abbiamo da poco rinnovato. Per cui l\'unica cosa che ci viene in mente come idea regalo è partecipare alla realizzazione del nostro prossimo viaggio! Come sapete amiamo viaggiare!',
       p2_1: 'Ci sono due paesi che al momemto ci piacerebbe visitare: ',
       p2_2: '! Siamo ancora indecisi quale sarà la scelta finale, ma vi aggiorneremo al più presto!',
-      p2_3: 'Se vi piace l\'idea potete aiutarci mandando un contributo a uno dei due conti bancari (italiano o inglese):',
+      intro: 'Se vi piace l\'idea potete aiutarci mandando un contributo a uno dei due conti bancari (italiano o inglese):',
       c1: 'Italiano (EUR)',
       c2: 'Inglese (GBP)',
-      ref: 'VIAGGIO'
+      ref: 'VIAGGIO',
+      openModal: 'Clicca qui per maggiori informazion'
     },
     venue: {
       label: 'Cerimonia',

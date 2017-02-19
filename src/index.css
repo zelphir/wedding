@@ -109,6 +109,23 @@ cite {
   text-align: right;
 }
 
+.more-info {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.more-info span {
+  cursor: pointer;
+  padding: 10px 15px;
+  background: #43576E;
+  color: #fff;
+  transition: background 0.2s linear;
+}
+
+.more-info span:hover {
+  background: #222426;
+}
+
 @media screen and (max-width: 600px) {
   .content {
     flex-direction: column;

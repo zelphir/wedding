@@ -26,10 +26,11 @@ const en = {
       p1_2: ' and it\'s true! But we all know that is not gonna happen! So, since someone already asked us about it, we were thinking about contributing to our next trip. As you know we love to travel! We also thought about something for the flat, but it\'s a small one, and we got all we need, more or less. So trip it is!',
       p2_1: 'There are two countries that we\'d like to visit: ',
       p2_2: '! We are still thinking which one first. We\'ll keep you posted.',
-      p2_3: 'If you want to help us, you can send a contribution to either our Euro (Italian) or English accounts below:',
+      intro: 'If you like the trip option, you can send us a contribution to either our Euro (Italian) or English accounts below:',
       c1: 'Italian (EUR)',
       c2: 'English (GBP)',
-      ref: 'WEDDING'
+      ref: 'WEDDING',
+      openModal: 'Click here for more info'
     },
     venue: {
       label: 'Ceremony',
